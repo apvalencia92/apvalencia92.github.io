@@ -1,9 +1,9 @@
 body{
-  background: #06192b;
+  /* background: #06192b; */
 }
 
 
-article:first-child{
+.wallpaper{
   width: 100%;
   height: 400px;
   background-image: url('../img/3BD.png');
@@ -67,3 +67,4 @@ article img:hover{
   padding: 10px;
   color: white;
 }
+

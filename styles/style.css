@@ -1,0 +1,69 @@
+body{
+  background: #06192b;
+}
+
+
+article:first-child{
+  width: 100%;
+  height: 400px;
+  background-image: url('../img/3BD.png');
+  background-size: 100% 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-attachment: fixed;
+  box-shadow: 1px 4px 5px black;
+}
+
+article img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+
+article h1{
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+  position: relative;
+  color: white;
+  text-shadow: 4px 4px 2px black;
+}
+
+
+article h1::before{
+  content: "Sitio web personal";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 2px white;
+}
+
+article img:hover{
+  transform: rotate(360deg);
+  transition: 1.5s all;
+  box-shadow: 1px 1px 5px black
+}
+
+
+.botones{
+  margin: 20px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.botones li {
+  margin: 5px;
+}
+
+.botones li a {
+  text-decoration: none;
+  background: steelblue;
+  padding: 10px;
+  color: white;
+}

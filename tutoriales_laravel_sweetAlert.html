@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm'
+        crossorigin='anonymous'>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/prism.css">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <script src="js/prism.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">PaulValencia92</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Tutoriales</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="jumbotron text-white bg-success">
+        <h1 class="title-tutorial text-center">¿Como utilizar Sweet Alert en Laravel 5.6?</h1>
+    </div>
+    <div class="container">
+        <p class="text-tutorial text-justify">La libreria
+            <b>Sweet alert</b> de Javascript nos permite generar alertas con estilos visualmente atractivos para los usuarios
+            de nuestro sistema. Por eso hoy te enseñare a insertar esta hermosa libreria en tu proyecto Laravel 5.6
+        </p>
+
+        <h2 class="pt-4 pb-2">Pasos para usar
+            <b>Sweet Alert</b> en laravel 5.6</h2>
+        <div class="section-container">
+            <ol style="font-size:22px">
+                <li>En nuestra terminal, dentro de nuestro proyecto escribimos
+                    <code>composer require realrashid/sweet-alert</code>
+                </li><br>
+                <li>Luego de que se haya instalado abrimos el archivo
+                    <code> config/app.php</code> importamos la libreria y generamos un alias:
+                    <pre>
+        <code class="language-php">'providers' => [
+         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+         ]           
+        'aliases' => [
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+        ]</code></pre></li><br>
+                <li>En el controlador, en este caso
+                    <code>UserController.php</code> importamos el namespace del alias que colocamos en el archivo del paso 2
+        <pre class="language-php line-numbers">
+        <code>use Alert;
+        class UserController extends Controller {
+        }</code></pre>
+                </li><br>
+                <li>En nuestro layout importamos la libreria de sweet-alert
+        <pre class="language-html"><code> < script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js > < /script > </code></pre>
+</li><br>
+        <li>
+            En la vista donde queremos mostrar nuestro mensaje usaremos  <code>@include('sweetalert::alert')</code>
+        </li>
+            </ol>
+        </div>
+
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+</body>
+
+</html>
